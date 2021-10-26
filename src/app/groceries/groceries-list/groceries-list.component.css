@@ -1,0 +1,18 @@
+.editing{
+    cursor: pointer;   
+    text-align: center;
+}
+
+.title{
+    display:block;
+    color: white;
+    background-color: black;
+}
+
+.title .edit{
+    float: right;
+}
+
+.title .id{
+    float:left;
+}

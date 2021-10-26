@@ -1,0 +1,24 @@
+<ng-container *ngIf="!studentId">
+  <div>
+    <input
+      type="text"
+      class="form-control"
+      #studentId
+      placeholder="Student ID"
+    />
+  </div>
+  <br />
+  <button
+    type="submit"
+    (click)="onDelete(studentId.value)"
+    class="btn btn-danger"
+  >
+    Delete Student
+  </button>
+</ng-container>
+
+<ng-container *ngIf="studentId">
+  <button type="submit" (click)="onReuseDelete()" class="btn btn-danger">
+    Delete Student
+  </button>
+</ng-container>

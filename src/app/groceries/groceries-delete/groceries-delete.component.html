@@ -1,0 +1,15 @@
+<ng-container *ngIf="!index">
+  <div>
+    <input type="text" class="form-control" #item placeholder="Item Index" />
+  </div>
+  <br />
+  <button type="submit" (click)="onDelete(item.value)" class="btn btn-danger">
+    Delete Student
+  </button>
+</ng-container>
+
+<ng-container *ngIf="index">
+  <button type="submit" (click)="onReuseDelete()" class="btn btn-danger">
+    Delete Student
+  </button>
+</ng-container>

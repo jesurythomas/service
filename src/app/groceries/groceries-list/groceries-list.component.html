@@ -1,0 +1,16 @@
+<div
+  class="card"
+  style="width: 18rem; margin-top: 10px"
+  *ngFor="let item of groceries; index as i"
+>
+  <div class="card-header title">
+    <span class="id">{{ item.item }}</span>
+    <span class="edit" (click)="onClick(i)"
+      ><i class="bi bi-pencil-square editing"></i
+    ></span>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ item.qty }}</li>
+    <li class="list-group-item">{{ item.price }}</li>
+  </ul>
+</div>

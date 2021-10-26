@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { CrudService } from './shared/crud.service';
-import { Student } from './shared/student';
+import { CrudService } from 'src/app/shared/crud.service';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-student-home',
+  templateUrl: './student-home.component.html',
+  styleUrls: ['./student-home.component.css'],
 })
-export class AppComponent implements OnInit {
+export class StudentHomeComponent implements OnInit {
   form = this.fb.group({
     $key: [''],
     firstName: ['', Validators.required],

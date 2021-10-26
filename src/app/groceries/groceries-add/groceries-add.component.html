@@ -1,0 +1,39 @@
+<div class="card mt-3">
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="item">Item</label>
+        <input
+          type="item"
+          class="form-control"
+          id="item"
+          formControlName="item"
+        />
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input
+          type="quantity"
+          class="form-control"
+          id="quantity"
+          formControlName="qty"
+          number
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="price"
+          class="form-control"
+          id="price"
+          formControlName="price"
+          number
+        />
+      </div>
+
+      <button type="submit" class="btn btn-secondary" [disabled]="!form.valid">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

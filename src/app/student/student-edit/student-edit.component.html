@@ -1,0 +1,54 @@
+<div class="card mt-2">
+  <div class="card-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="firstname"
+          class="form-control"
+          id="firstName"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="lastName"
+          class="form-control"
+          id="lastName"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input
+          type="mobileNumber"
+          class="form-control"
+          id="mobileNumber"
+          formControlName="mobileNumber"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Edit Student</button>
+    </form>
+
+    <hr />
+
+    <button type="submit" class="btn btn-secondary" (click)="stopEditing()">
+      Stop Editing
+    </button>
+
+    <hr />
+
+    <app-student-delete [studentId]="student.$key"></app-student-delete>
+  </div>
+</div>

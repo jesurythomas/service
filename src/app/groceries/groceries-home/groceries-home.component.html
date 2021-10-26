@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="small">
+        <app-groceries-add (submitted)="updateList()"></app-groceries-add>
+        <hr />
+        <app-groceries-delete></app-groceries-delete>
+      </div>
+    </div>
+    <div class="col ml-5 mt-2" *ngIf="dataLoaded">
+      <app-groceries-list [groceries]="groceryList"></app-groceries-list>
+    </div>
+  </div>
+</div>

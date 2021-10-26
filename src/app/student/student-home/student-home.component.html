@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="small">
+        <app-student-add></app-student-add>
+        <hr />
+        <app-student-delete></app-student-delete>
+      </div>
+    </div>
+    <div class="col ml-5 mt-2" *ngIf="students$">
+      <app-student-card
+        [students$]="students$"
+        (selectedStudent)="onEdit($event)"
+      ></app-student-card>
+    </div>
+    <div class="col mt-2" *ngIf="editing">
+      <app-student-edit
+        [student]="students$[editingIndex]"
+        (editStatus)="editComplete($event)"
+      ></app-student-edit>
+    </div>
+  </div>
+</div>
