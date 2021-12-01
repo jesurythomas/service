@@ -5,6 +5,11 @@
         <app-student-add></app-student-add>
         <hr />
         <app-student-delete></app-student-delete>
+        <hr />
+        <input type="text" class="form-control" #id />
+        <button class="btn btn-secondary" (click)="onSearch(id.value)">
+          Search
+        </button>
       </div>
     </div>
     <div class="col ml-5 mt-2" *ngIf="students$">
@@ -19,5 +24,6 @@
         (editStatus)="editComplete($event)"
       ></app-student-edit>
     </div>
+    <button class="btn btn-primary" (click)="testFunction()">Test</button>
   </div>
 </div>
